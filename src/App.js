@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import icon from "./img/faith_wraps_icon.jpg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        
+        <div className="App">
+        <Header />
+          <div className="App-header">
+            <p style={{margin:"30px"}}>Faith Wraps. Changing cars in something beautiful.</p>
+            <img src={icon} alt="Icon" style={{maxWidth:"90%", height: "auto", margin:"20px"}}></img>
+          </div>
+        </div>
+      </Router>
+    </>
   );
 }
 
